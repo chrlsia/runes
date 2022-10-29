@@ -3,9 +3,12 @@ package main
 import "fmt"
 
 func main(){
-	s1 := "S i Χ ρ 🌴"
-	b1 := []byte(s1)
-	fmt.Printf("Bytes of \"S i Χ ρ 🌴\" are:\n")
-	fmt.Println(b1) //[83 32 105 32 206 167 32 207 129 32 240 159 140 180]
-	// each rune(=code point) is from 1 to 4 bytes
+	s10 := "🌴 Siannas Χρήστος"
+
+	// range to string gives us 2 things:
+	// first the position of character
+	// second the current character(=rune=code point)
+	for pos, ele := range s10 {
+		fmt.Printf("%d-%c and byte position %d\n", ele, ele, pos)
+	}
 }
