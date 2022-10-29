@@ -3,14 +3,9 @@ package main
 import "fmt"
 
 func main(){
-	// assign
-	r1:='a' 
-	r2:='\u03B2' // 2 bytes
-	r10:='\U0001F334' // 4 bytes
-
-	// display
-	fmt.Println(r1) // 97, code point
-	fmt.Println(r2) // 946, code point
-	fmt.Printf("%U\n",r2) // U+03B2
-	fmt.Printf("%c\n",r10) // 🌴
+	s1 := "S i Χ ρ 🌴"
+	fmt.Printf("\nCode points of \"S i Χ ρ 🌴\" are:\n")
+	r3 := []rune(s1)
+	fmt.Printf("%U\n", r3) //[U+0053 U+0020 U+0069 U+0020 U+03A7 U+0020 U+03C1 U+0020 U+1F334]
+	// each character is a rune(=code point)
 }
